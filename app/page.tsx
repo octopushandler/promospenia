@@ -30,7 +30,10 @@ export default function Home() {
           <CitySection key={city.slug} city={city} />
         ))}
         <div className="container mx-auto px-4 py-12 text-center">
-          <button className="px-12 py-4 bg-primary text-white rounded-full font-bold text-lg hover:bg-primary-dark hover:shadow-lg transition-all duration-300">
+          <button 
+            onClick={() => window.location.href = process.env.NEXT_PUBLIC_HOTEL_SEARCH_URL || ""}
+            className="px-12 py-4 bg-primary text-white rounded-full font-bold text-lg hover:bg-primary-dark hover:shadow-lg transition-all duration-300"
+          >
             Explorar todas las ciudades
           </button>
         </div>

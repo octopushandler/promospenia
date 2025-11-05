@@ -51,7 +51,7 @@ export default function CitySection({ city }: CitySectionProps) {
       <div className="relative">
         {canScrollLeft && (
           <button
-            onClick={() => scroll("left")}
+            onClick={() => window.location.href = process.env.NEXT_PUBLIC_HOTEL_SEARCH_URL || ""}
             className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-16 z-10 p-2 rounded-full bg-primary text-white hover:bg-primary-dark transition-colors shadow-lg"
             aria-label="Scroll left"
           >
@@ -69,7 +69,7 @@ export default function CitySection({ city }: CitySectionProps) {
 
         {canScrollRight && (
           <button
-            onClick={() => scroll("right")}
+            onClick={() => window.location.href = process.env.NEXT_PUBLIC_HOTEL_SEARCH_URL || ""}
             className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-16 z-10 p-2 rounded-full bg-primary text-white hover:bg-primary-dark transition-colors shadow-lg"
             aria-label="Scroll right"
           >
