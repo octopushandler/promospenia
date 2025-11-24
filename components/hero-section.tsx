@@ -1,6 +1,13 @@
 "use client"
 
 export default function HeroSection() {
+  const handleButtonClick = () => {
+    const searchUrl = process.env.NEXT_PUBLIC_HOTEL_SEARCH_URL
+    if (searchUrl) {
+      window.location.href = searchUrl
+    }
+  }
+
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-primary via-primary/90 to-primary/5 py-32 md:py-48 lg:py-56">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -30,10 +37,16 @@ export default function HeroSection() {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8" style={{ animationDelay: "0.6s" }}>
-            <button className="px-10 py-4 bg-white text-primary rounded-full font-bold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 drop-shadow-lg">
+            <button 
+              onClick={handleButtonClick}
+              className="px-10 py-4 bg-white text-primary rounded-full font-bold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 drop-shadow-lg"
+            >
               Explorar ofertas
             </button>
-            <button className="px-10 py-4 border-3 border-white text-white rounded-full font-bold text-lg hover:bg-white/10 hover:scale-105 transition-all duration-300">
+            <button 
+              onClick={handleButtonClick}
+              className="px-10 py-4 border-3 border-white text-white rounded-full font-bold text-lg hover:bg-white/10 hover:scale-105 transition-all duration-300"
+            >
               Ver ciudades
             </button>
           </div>

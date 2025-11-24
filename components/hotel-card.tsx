@@ -46,7 +46,15 @@ export default function HotelCard({ hotel }: HotelCardProps) {
           <span className="text-sm text-muted-foreground">{hotel.rating}</span>
         </div>
 
-        <button className="w-full bg-primary text-primary-foreground py-2 rounded-lg font-semibold hover:bg-primary-dark transition-colors">
+        <button 
+          onClick={() => {
+            const searchUrl = process.env.NEXT_PUBLIC_HOTEL_SEARCH_URL
+            if (searchUrl) {
+              window.location.href = searchUrl
+            }
+          }}
+          className="w-full bg-primary text-primary-foreground py-2 rounded-lg font-semibold hover:bg-primary-dark transition-colors"
+        >
           Ver disponibilidad
         </button>
       </div>
