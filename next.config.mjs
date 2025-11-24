@@ -7,7 +7,7 @@ const nextConfig = {
     unoptimized: true,
   },
   env: {
-    NEXT_PUBLIC_HOTEL_SEARCH_URL: "https://tu-dominio.com/buscar-hoteles",
+    NEXT_PUBLIC_HOTEL_SEARCH_URL: "https://booking-phi-onhe.vercel.app",
   },
 }
 
